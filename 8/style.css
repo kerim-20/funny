@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+
+
+.animation{
+    background: #b30b0b;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: move 10s infinite;
+    animation-delay: 2s;
+}
+
+.animation:hover{
+    animation-play-state: paused;
+}
+
+.animation-2{
+    animation: move 5s infinite;
+}
+
+.animation-3{
+    animation: move 7s infinite ease-in-out;
+    animation-direction: reverse;
+}
+
+@keyframes move{
+    0%{
+        top: 0;
+        left: 0;
+        background: #2ea3fa;
+    }
+    20%{
+        left: 60%;
+        top: 50%;
+        transform: rotate(360deg)
+        scale(1.2);
+    }
+    60%{
+        left: 30%;
+        top: 80%;
+        background: #066;
+       
+    }
+    100%{
+        left: 0;
+        top: 0;
+        background: #b30b0b;
+    }
+}
